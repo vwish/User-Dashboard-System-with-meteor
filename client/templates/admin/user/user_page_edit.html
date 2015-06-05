@@ -1,0 +1,72 @@
+<template name="userPageEdit">
+  {{#if errorMessage}}
+    <div class="alert alert-danger">{{errorMessage}}</div>
+  {{/if}}
+  {{#if infoMessage}}
+    <div class="alert alert-success no-margin">{{infoMessage}}</div>
+  {{/if}}
+
+  {{> userPageModal}}
+
+  <!-- <p>{{accountBody}}</p> -->
+  <form class="form-horizontal" id="userPageEditForm">
+    <div class="form-group">
+      <label for="staticUser" class="col-sm-2 control-label">User</label>
+      <div class="col-sm-4">
+        <p class="form-control-static">{{userName}}</p>
+        <!-- <input type="user" class="form-control" id="inputUser1" placeholder="Username"> -->
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputEmail" class="col-sm-2 control-label">Email</label>
+      <div class="col-sm-4">
+        <input type="email" class="form-control" id="inputEmail" placeholder="Email" value="{{email}}">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputFullName" class="col-sm-2 control-label">Name</label>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" id="inputFullName" placeholder="First Last" value="{{fullName}}">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputCity" class="col-sm-2 control-label">City</label>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" id="inputCity" placeholder="City" value="{{city}}">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputRegion" class="col-sm-2 control-label">State</label>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" id="inputRegion" placeholder="State" value="{{region}}">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputCountry" class="col-sm-2 control-label">Country</label>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" id="inputCountry" placeholder="Country" value="{{country}}">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="inputAdmin" class="col-sm-2 control-label"></label>
+      <div class="col-sm-4">
+        <label>
+          <input type="checkbox" value="true" id="inputAdmin" checked="{{admin}}" {{checkDisable}}> Admin
+        </label>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="inputAdmin" class="col-sm-2 control-label"></label>
+      <div class="col-sm-4">
+        <input type="submit" class="btn btn-primary" value="Update User">
+        {{#if isNotUser}}
+          <a class="btn btn-danger" id="userPageEditDelete" href="/admin/users" role="button">Delete User</a>
+        {{/if}}
+        <a class="btn btn-default" id="userPageEditCancel" href="/admin/users" role="button">Cancel</a>
+      </div>
+    </div>
+  </form>
+  
+</template>

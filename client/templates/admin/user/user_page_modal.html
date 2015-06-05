@@ -1,0 +1,25 @@
+<template name="userPageModal">
+  <!-- <div class="container" id="outer"> -->
+  <div class="modal fade in" id="userPageModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class = "modal-dialog">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h4 class="modal-title">Delete User</h4>
+        </div>
+
+        <div class="modal-body">
+            <p> You are about to delete user: {{userName}}. Are you sure? </p>
+
+        </div> <!-- modal-body -->
+
+        <div class="modal-footer">
+            <button type="button" id="userPageModalConfirm" class="btn btn-primary">Confirm</button>
+          <button type="button" id="userPageModalCancel" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        </div>
+
+      </div> <!-- modal-content -->
+    </div> <!-- modal-dialog -->
+  </div>
+  <!-- </div> container -->
+</template>

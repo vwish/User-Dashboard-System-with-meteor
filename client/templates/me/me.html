@@ -1,0 +1,62 @@
+<template name="me">
+  <li class="dropdown">
+    <a href="#" data-toggle="dropdown" class="dropdown-toggle" id="meLink"> {{currentUser.username}}<b class="caret"></b></a>
+    <div class="dropdown-menu me" >
+      {{#if errorMessage}}
+        <div class="alert alert-danger">{{errorMessage}}</div>
+      {{/if}}
+      {{#if infoMessage}}
+        <div class="alert alert-success no-margin">{{infoMessage}}</div>
+      {{/if}}
+  
+      {{#if showChange }}
+        {{> meChangePassword}}
+      {{else}}
+        {{#if showAccount}}
+          {{> meAccount}}
+        {{else}}
+          {{#if showEditAccount}}
+            {{> meEditAccount}}
+          {{else}}
+            {{> meNormal}}
+          {{/if}}
+        {{/if}}
+      {{/if}}
+    </div>
+  </li>
+</template>
+
+
+<template name="meNormal">
+  <h3> All about me </h3>
+  <div class="form-group">
+    <a class="btn btn-block btn-default" id="meAccount" href="/" role="button">Account</a>
+  </div>
+  <div class="form-group">
+    <a class="btn btn-block btn-default" id="meChangePass" href="/" role="button">Change Password</a>
+  </div>
+  <div class="form-group">
+    <a class="btn btn-block btn-primary" id="meSignOut" href="/" role="button">Sign out</a>
+  </div>
+</template>
+
+<template name="meChangePassword">
+  <form class="form" id="meChangePasswordForm"> 
+    <div class="form-group">
+        <input type="password" class="form-control" id="oldPassword" placeholder="Current Password">
+    </div>
+    <div class="form-group">
+        <input type="password" class="form-control" id="newPassword" placeholder="New Password">
+    </div>
+    <div class="form-group">
+        <input type="password" class="form-control" id="newPasswordConfirm" placeholder="New Password (confirm)">
+    </div>
+    <div class="form-group">
+        <input type="submit" class="btn btn-block btn-primary" value="Change Password"/>
+    </div>
+    <div class="form-group">
+        <a class="btn btn-block btn-default" id="meCancel" href="/" role="button">Cancel</a>
+    </div>
+  </form>
+</template>
+

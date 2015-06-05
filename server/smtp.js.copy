@@ -1,0 +1,11 @@
+/ make sure to .gitignore this file so it is only local
+Meteor.startup(function () {
+  smtp = {
+    username: 'appsomething@heroku.com',   // get this from heroku.com/mandill/Account/Account Details
+    password: 'passwordsomething',   // this too
+    server:   'smtp.mandrillapp.com',
+    port: 587
+  }
+
+  process.env.MAIL_URL = 'smtp://' + encodeURIComponent(smtp.username) + ':' + encodeURIComponent(smtp.password) + '@' + encodeURIComponent(smtp.server) + ':' + smtp.port;
+});

@@ -1,0 +1,12 @@
+<template name="applicationLayout">
+
+    <body>
+        {{#if currentUser}} 
+        {{> header}} 
+        {{/if}} 
+
+        {{> yield}}
+        
+    </body>
+    {{> footer}}
+</template>

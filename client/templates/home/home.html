@@ -1,0 +1,29 @@
+<template name="home">
+    <!-- Carousel
+  ================================================== -->
+    <header>
+    </header>
+    <div class="container" id="outer">
+
+
+    
+        {{#if currentUser}} 
+
+        {{> discover}}
+
+        {{else}} 
+
+        {{> login}} 
+        
+        {{/if}} 
+
+    
+         
+
+
+        {{> resetPasswordModal}}
+        <!-- <p>{{homeBody}}</p>
+		<p>{{homeBody}}</p>
+		<p>{{homeBody}}</p> -->
+    </div>
+</template>

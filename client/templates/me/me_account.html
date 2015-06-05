@@ -1,0 +1,49 @@
+
+<template name="meAccount">
+  <h3> Account </h3>
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label for="staticUser" class="col-sm-4 control-label">User</label>
+      <div class="col-sm-8">
+        <p class="form-control-static">{{userName}}</p>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputEmail" class="col-sm-4 control-label">Email</label>
+      <div class="col-sm-8">
+        <p class="form-control-static">{{email}}</p>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputFullName" class="col-sm-4 control-label">Name</label>
+      <div class="col-sm-8">
+        <p class="form-control-static">{{fullName}}</p>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputCity" class="col-sm-4 control-label">City</label>
+      <div class="col-sm-8">
+        <p class="form-control-static">{{city}}</p>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputRegion" class="col-sm-4 control-label">State</label>
+      <div class="col-sm-8">
+        <p class="form-control-static">{{region}}</p>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputCountry" class="col-sm-4 control-label">Country</label>
+      <div class="col-sm-8">
+        <p class="form-control-static">{{country}}</p>
+      </div>
+    </div>
+    <div class="form-group">
+      <a class="btn btn-block btn-primary" id="meEditAccount" href="/" role="button">Edit</a>
+    </div>
+    <div class="form-group">
+      <a class="btn btn-block btn-default" id="meAccountCancel" href="/" role="button">Cancel</a>
+    </div>
+  </form>
+</template>
+

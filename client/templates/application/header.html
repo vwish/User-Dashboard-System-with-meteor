@@ -1,0 +1,48 @@
+<template name="header">
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/" title="meteoryte" id="logo"> 
+        Logo</a>
+            </div>
+            <!-- navbar-header -->
+            <div id="navbar" class="navbar-collapse collapse navigation navbar-right">
+                <ul class="nav navbar-nav">
+                    <!--      <li class="{{active 'home'}}"><a href="/">Home</a></li> -->
+                    <li class="{{active 'discover'}}"><a href="{{pathFor 'discover'}}" id="discoverLink">Discover</a></li>
+                    <li class="{{active 'support'}}"><a href="{{pathFor 'support'}}" id="supportLink">Support</a></li>
+                    {{#if isInRole 'admin'}}
+                    <li class="dropdown {{active 'admin'}}">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="adminLink">Admin<span class="caret"></span></a>
+                        <ul class=" dropdown-menu">
+                            <li class="dropdown" id="users">
+                                <a href="{{pathFor 'usersList'}}" id="usersLink">Users</a>
+                            </li>
+                            <li class="dropdown" id="sub-2">
+                                <a href="{{pathFor 'sub2'}}">Sub 2</a>
+                            </li>
+                        </ul>
+                    </li>
+                    {{/if}} 
+
+                    {{#if currentUser}} {{> me}} {{else}}
+                    
+                    <li class="{{active 'signup'}}"><a href="{{pathFor 'signup'}}" class="navbar-signup" id="getStartedLink">Sign Up</a></li>
+                    <!--  {{> login}} -->
+                    {{/if}}
+
+                </ul>
+            </div>
+            <!-- navbar-collapse -->
+        </div>
+        <!-- container -->
+    </nav>
+    <!-- navbar -->
+</template>

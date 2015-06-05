@@ -1,0 +1,13 @@
+<template name="userItem">
+  <tr>
+    <td>{{userName}}</td>
+    <td>{{fullName}}</td>    
+    <td>{{email}}</td>
+    <td align="center">
+        {{#if admin}}
+          <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+        {{/if}}
+    </td>
+    <td align="center"><a href="{{pathFor 'userPage'}}" class="btn btn-default btn-xs">Edit</a></td>
+  </tr>
+</template>

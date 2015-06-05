@@ -1,0 +1,44 @@
+<template name="signup">
+	<div class="container" id="outer">
+		<h1> Sign up </h1>
+		<form class="form-horizontal">
+		  <div class="form-group">
+			  {{#if errorMessage}}
+	        <div class="alert alert-danger">{{errorMessage}}</div>
+	      {{/if}}
+	      {{#if infoMessage}}
+	        <div class="alert alert-success no-margin">{{infoMessage}}</div>
+	      {{/if}}
+
+		    <label for="signupUser" class="col-md-2 control-label">User Name</label>
+		    <div class="col-md-6">
+		      <input type="text" class="form-control" id="signupUser" name="user" placeholder="User Name">
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label for="signupEmail" class="col-md-2 control-label">Email</label>
+		    <div class="col-md-6">
+		      <input type="email" class="form-control" id="signupEmail" name="email" placeholder="Email">
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label for="signupPassword" class="col-md-2 control-label">Password</label>
+		    <div class="col-md-6">
+		      <input type="password" class="form-control" id="signupPassword" name="password" placeholder="Password">
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label for="signupPasswordConfirm" class="col-md-2 control-label">Confirm</label>
+		    <div class="col-md-6">
+		      <input type="password" class="form-control" id="signupPasswordConfirm" name="password-confirm" placeholder="Confirm">
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <div class="col-md-offset-2 col-md-10">
+		      <input type="submit" class="btn btn-primary submit" value="Join Us"/>
+		    	<a class="btn btn-default" href="{{pathFor 'home'}}">Cancel</a>
+		    </div>
+		  </div>
+    </form>
+  </div> <!--container -->
+</template>

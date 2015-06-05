@@ -1,0 +1,45 @@
+<template name="login">
+
+  
+      {{#if errorMessage}}
+        <div class="alert alert-danger">{{errorMessage}}</div>
+      {{/if}}
+      {{#if infoMessage}}
+        <div class="alert alert-success no-margin">{{infoMessage}}</div>
+      {{/if}}
+      {{#if showForgot}}
+        <form class="form" id="forgotPasswordForm">
+          <h3>Reset Password</h3>
+          <div class="form-group">
+            <input class='form-control' id="forgotPasswordEmail" type="text" name="email" placeholder="Email Address">
+          </div>
+          <div class="form-group">
+            <input type="submit" class="btn btn-block btn-primary" value="Send">
+          </div>
+          <div class="form-group">
+              <a class="btn btn-block btn-default" id="forgotPasswordCancel" href="#" role="button">Cancel</a>
+          </div>            
+        </form>
+        {{else}}
+        <h2> Log in </h2>
+        
+        <form class="form" id="formLogin"> 
+          <div class="form-group">
+            <input class='form-control' name="username" id="loginUser" type="text" placeholder="Username"> 
+          </div>
+          <div class="form-group">
+            <input class='form-control' name="password" id="loginPassword" type="password" placeholder="Password">
+          </div>
+          <div class="form-group">
+            <input type="submit" class="btn btn-block btn-primary" value="Sign in"/>
+          </div>
+        </form>
+        <a href="#" id="forgotPass">Forgot Password?</a>       
+      {{/if}}
+      
+
+      <div class="want_register">  
+      want to register <a href="{{pathFor 'signup'}}">{{signup}}</a>
+      </div>
+
+</template>

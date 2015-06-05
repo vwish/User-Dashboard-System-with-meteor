@@ -1,0 +1,48 @@
+<template name="meEditAccount">
+  <h3> Edit Account </h3>
+  <!-- <p>{{accountBody}}</p> -->
+  <form class="form-horizontal" id="meEditAccountForm">
+    <div class="form-group">
+      <label for="staticUser" class="col-sm-4 control-label">User</label>
+      <div class="col-sm-8">
+        <p class="form-control-static">{{userName}}</p>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputEmail" class="col-sm-4 control-label">Email</label>
+      <div class="col-sm-8">
+        <input type="email" class="form-control" id="inputEmail" placeholder="Email" value="{{email}}">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputFullName" class="col-sm-4 control-label">Name</label>
+      <div class="col-sm-8">
+        <input type="text" class="form-control" id="inputFullName" placeholder="First Last" value="{{fullName}}">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputCity" class="col-sm-4 control-label">City</label>
+      <div class="col-sm-8">
+        <input type="text" class="form-control" id="inputCity" placeholder="City" value="{{city}}">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputRegion" class="col-sm-4 control-label">State</label>
+      <div class="col-sm-8">
+        <input type="text" class="form-control" id="inputRegion" placeholder="State" value="{{region}}">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputCountry" class="col-sm-4 control-label">Country</label>
+      <div class="col-sm-8">
+        <input type="text" class="form-control" id="inputCountry" placeholder="Country" value="{{country}}">
+      </div>
+    </div>
+    <div class="form-group">
+      <input type="submit" class="btn btn-block btn-primary" value="Update">
+    </div>
+    <div class="form-group">
+      <a class="btn btn-block btn-default" id="meEditAccountCancel" href="/" role="button">Cancel</a>
+    </div>
+  </form>
+</template>
