@@ -30,7 +30,7 @@ Template.signup.events({
                 template.errorMessage.set(null);
               }, 3000);
             } else {
-              template.infoMessage.set('Welcome to Meteoryte!');
+              template.infoMessage.set('Welcome to User System!');
               Meteor.setTimeout(function() {
                 template.infoMessage.set(null);
                 Router.go('home');

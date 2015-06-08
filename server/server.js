@@ -35,8 +35,8 @@ Meteor.users.allow({
   }
 });
 
-Accounts.emailTemplates.siteName = "meteoryte.com";
-Accounts.emailTemplates.from = "Meteoryte Admin <accounts@meteoryte.com>";
+Accounts.emailTemplates.siteName = "abc.com";
+Accounts.emailTemplates.from = "<accounts@meteoryte.com>";
 
 //Test denied:  Meteor.users.update( { _id: Meteor.userId() }, { $set: { 'username': "Noot" }} );
 //Test allowed:  Meteor.users.update( { _id: Meteor.userId() }, { $set: { 'profile.fullname': "Noot" }} );
