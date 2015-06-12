@@ -17,4 +17,7 @@ Template.meEditAccount.helpers({
   country: function() {
     return Meteor.user().profile.country;
   }
+
 });
+
+

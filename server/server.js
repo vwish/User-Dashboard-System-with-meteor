@@ -69,7 +69,7 @@ Meteor.publish("singleUser", function (id) {
 if (Meteor.isServer) {
   Meteor.startup(function () {
     createUserAdminRole();
-    createUsers(); //delete this line before launching
+    //createUsers(); //delete this line before launching
   });
 
 }

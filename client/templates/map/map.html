@@ -1,0 +1,50 @@
+<template name="map">
+    <div class="map-container">
+        {{> office_location }} 
+
+        {{> edit_office_location}} 
+
+
+        {{> googleMap name="map" options=mapOptions}}
+    </div>
+</template>
+
+<template name="office_location">
+    <div class="form-group">
+        <div class="col-sm-8">
+            <p>Address:       {{addressline}}</p>
+            <p>Office Number: {{office_number}}</p>
+            <p>About Office:  {{office_summery}}</p>
+        </div>
+    </div>
+</template>
+
+<template name="edit_office_location">
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label for="officeadress" class="col-sm-4 control-label">Address</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="officeadress" placeholder="Address" value="{{addressline}}">
+            </div>
+        </div>
+        <br/>
+        <div class="form-group">
+            <label for="officenumber" class="col-sm-4 control-label">Office Number</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="officenumber" placeholder="Email" value="{{office_number}}">
+            </div>
+        </div>
+        <br/>
+        <div class="form-group">
+            <label for="officesummery" class="col-sm-4 control-label">About Office</label>
+            <div class="col-sm-8">
+                <textarea rows="4" cols="50" id="office_summery" placeholder="Write about office"></textarea>
+            </div>
+        </div>
+        <br/>
+        <div class="form-group">
+            <input id="officeaddress" type="submit" class="btn btn-block btn-primary" value="Update">
+        </div>
+    </form>
+</template>
+

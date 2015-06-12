@@ -17,3 +17,6 @@ underscore
 sanjo:jasmine
 velocity:html-reporter
 mdg:geolocation
+dburles:google-maps
+aldeed:collection2
+autopublish

@@ -24,10 +24,10 @@
 //   });
 // }
 
-
    if(Meteor.isClient){
     Meteor.startup(function () {
-        Geolocation.currentLocation();
-    });
+         // a = Geolocation.currentLocation();
+        //alert(a)
+      });
 
     }
